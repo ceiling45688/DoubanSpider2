@@ -62,8 +62,8 @@ USER_AGENT_LIST = [
 
 tunnel = "tps242.kdlapi.com:15818"
 
-username = "t13633606247196"
-password = "ld5xvdqv"
+username = "t13633606247196" #已过期
+password = "ld5xvdqv" #已过期
 proxies = {
     "http": "http://%(user)s:%(pwd)s@%(proxy)s/" % {"user": username, "pwd": password, "proxy": tunnel},
     "https": "http://%(user)s:%(pwd)s@%(proxy)s/" % {"user": username, "pwd": password, "proxy": tunnel}
@@ -82,7 +82,7 @@ def db():
         url = f'https://www.douban.com/group/GNZ48/discussion?start={i*25}&type=elite'
         headers = {
             'user-agent': random.choice(USER_AGENT_LIST),
-            'Cookie':'bid = DhXrKbqa3Fg;douban - fav - remind = 1;__yadk_uid = CejJOKzMapB4oH4WvenHkTNkcDmrwEe9;ll = "118329";__gads = ID = 60306c26315b11da - 22e21274a6ca00ca: T = 1627921566:RT = 1627921566:S = ALNI_MaZSSa_DDyxAMrvAIZ5xqF3heb0EQ;__utmc = 30149280;__utmv = 30149280.23974;__utmz = 30149280.1633617400.148.32.utmcsr = baidu | utmccn = (organic) | utmcmd = organic;ct = y;push_doumail_num = 0;dbcl2 = "239740621:b559XqvQ0DQ";ck = _wRz;_pk_ref.100001.8cb4 = ["", "", 1636343637,"https://www.baidu.com/link?url=d0ccEEQEo4lNpNhBa3kMGO-72jllrg6u-tfApUyAd3R27KlCZ2EtZw_d7tOJM2ok&wd=&eqid=c24c546b0008bbb600000006615f05bd"];_pk_ses.100001.8cb4 = *;ap_v = 0, 6.0;push_noty_num = 0;__utma = 30149280.356891611.1627573649.1636337738.1636343638.164;__utmt = 1;_pk_id.100001.8cb4 = bf358952db2791d6.1627567291.164.1636343728.1636339117.;__utmb = 30149280.54.4.1636343727834'
+            'Cookie':"****" # 爬取六页之后需要登录
         }
 
         ss = session.get(url,headers=headers,proxies=proxies).html
